@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección de Películas Live-Action de Disney</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #030211;
+            color: #333;
+        }
+        .header {
+            position: relative;
+            text-align: center;
+            color: white;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            filter: brightness(50%);
+        }
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin: 0;
+            padding: 0;
+        }
+        .header button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .movie-card {
+            background-color: rgb(18, 9, 51);
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            color: white;
+        }
+        .movie-card img {
+            width: 100%;
+            height: auto;
+        }
+        .movie-card h3 {
+            font-size: 20px;
+            margin: 15px;
+        }
+        .movie-card p {
+            font-size: 16px;
+            margin: 15px;
+            color: #b8c2fd;
+        }
+        .movie-card button {
+            margin: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ec8fdd;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .description {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            color: whitesmoke;
+            max-width: 800px;
+            margin: auto;
+            
+            
+        }
+        .description img {
+            width: 50%;
+            max-height: 500px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        
+        }
+        .wide-image-section {
+            width: 100%;
+            height: 300px; /* Ajusta la altura según sea necesario */
+            background: url('wide_image.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .movie-card img {
+    width: auto;
+    height: 300px; /* Establece la altura deseada */
+    object-fit: cover; /* Escala la imagen para cubrir todo el contenedor manteniendo la relación de aspecto */
+    object-position: center center; /* Centra la imagen tanto horizontal como verticalmente */
+}
+.regresar{
+    margin: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f892e2;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+}
+h3{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <img src="disney.webp" alt="Background Image">
+        <div class="header-content">
+            <h1 id="inicio">Descubre nuestra nueva colección de películas live-action de Disney.</h1>
+           
+        </div>
+    </section>
+    <div class="gallery">
+        <div class="movie-card">
+            <img src="aladdin1.gif" alt="Aladdin">
+            <h3>Aladdin</h3>
+            <p>Disfruta de la magia y aventura con Aladdin.</p>
+           <center><a href="#description-section"><button onclick="showDescription('aladdin')">Ver Más</button></a></center> 
+        </div>
+        <div class="movie-card">
+            <img src="cruella1.gif" alt="The Lion King">
+            <h3>Cruella de vill </h3>
+            <p>Una historia de la grandiosa diseñadora Cruella de Vill.</p>
+           <center><a href="#description-section"><button onclick="showDescription('lion_king')">Ver Más</button></center> 
+            </div></a>
+        <div class="movie-card">
+            <img src="labellaylabestia1.gif" alt="Beauty and the Beast">
+            <h3>Beauty and the Beast</h3>
+            <p>Un cuento tan antiguo como el tiempo.</p>
+            <center><a href="#description-section"><button onclick="showDescription('beauty_and_beast')">Ver Más</button></a></center>
+        </div>
+        <div class="movie-card">
+            <img src="mulan1.gif" alt="Mulan">
+            <h3>Mulan</h3>
+            <p>Una joven valiente que se disfraza de hombre para salvar a China.</p>
+            <center><a href="#description-section"><button onclick="showDescription('mulan')">Ver Más</button></a>
+            </center>
+         </div>
+        <div class="movie-card">
+            <img src="dumbo1.gif" alt="Dumbo">
+            <h3>Dumbo</h3>
+            <p>Un pequeño elefante con grandes orejas que puede volar.</p>
+            <center><a href="#description-section"><button onclick="showDescription('dumbo')">Ver Más</button></a></center>
+        </div>
+        <div class="movie-card">
+            <img src="cenicienta1.gif" alt="Cinderella">
+            <h3>Cinderella</h3>
+            <p>Una historia mágica de una joven y su hada madrina.</p>
+            <center><a href="#description-section"><button onclick="showDescription('cinderella')">Ver Más</button></a></center>
+        </div>
+        <div class="movie-card">
+            <img src="ellibrodelaseva1.gif" alt="The Jungle Book">
+            <h3>The Jungle Book</h3>
+            <p>Las aventuras de Mowgli en la jungla.</p>
+            <center><a href="#description-section"><button onclick="showDescription('jungle_book')">Ver Más</button></a></center>
+        </div>
+        <div class="movie-card">
+            <img src="alicia1.gif" alt="Alice in Wonderland">
+            <h3>Alice in Wonderland</h3>
+            <p>Acompaña a Alice en su viaje al País de las Maravillas.</p>
+            <center><a href="#description-section"><button onclick="showDescription('alice')">Ver Más</button></a></center>
+        </div>
+        <div class="movie-card">
+            <img src="malefica1.gif" alt="Maleficent">
+            <h3>Maleficent</h3>
+            <p>La historia no contada de la villana más icónica de Disney.</p>
+           <center><a href="#description-section"><button onclick="showDescription('maleficent')">Ver Más</button></a></center> 
+        </div>
+    </div>
+    <section class="description" id="description-section">
+        <img id="description-image" src="" alt="Description Image">
+        <h2 id="description-title"></h2>
+        <p id="description-text"></p>
+        <a href="#inicio"><button class="regresar">Regresar</button></a>
+    </section>
+    <section class="wide-image-section"></section>
+
+    <script>
+        function showDescription(movie) {
+            var descriptions = {
+                'aladdin': {
+                    'image': 'aladdin1.gif',
+                    'title': 'Aladdin',
+                    'text': 'Aladdin: Adéntrate en la vibrante ciudad de Agrabah y acompaña a Aladdin en un emocionante viaje lleno de magia y aventura. Esta película te sumerge en un mundo de genios, alfombras voladoras y deseos concedidos. Descubre cómo Aladdin, un joven ladrón con un corazón de oro, se encuentra con la lámpara mágica y desata el poder del genio, desafiando al malvado Jafar y conquistando el corazón de la princesa Jasmine. Es una historia de valentía, amor y la búsqueda de tu verdadero destino.'
+                
+                },
+                'lion_king': {
+                    'image': 'cruella1.gif',
+                    'title': 'Cruella',
+                    'text': 'Cruella: Sumérgete en la deslumbrante y emocionante escena de la moda de Londres de los años 70 con "Cruella". Esta película te lleva al mundo de la moda de alta costura y te presenta a Estella, una joven talentosa con un estilo único y una determinación inquebrantable. A medida que Estella se transforma en la intrépida Cruella de Vil, descubrirás los secretos de su pasado, sus luchas por el reconocimiento y su ascenso meteórico en el competitivo mundo de la moda. Es una historia de ambición, creatividad y el poder de ser fiel a ti mismo.'
+                },
+                'beauty_and_beast': {
+                    'image': 'labellaylabestia1.gif',
+                    'title': 'Beauty and the Beast',
+                    'text': 'Beauty and the Beast: Sumérgete en un mundo de cuentos de hadas con "Beauty and the Beast", una historia atemporal de amor y redención. Ambientada en un encantador pueblo francés, sigue el viaje de Bella, una joven inteligente y valiente, que se encuentra con una bestia encantada en un misterioso castillo. A través de su relación con la Bestia y los diversos personajes encantados del castillo, Bella descubre el verdadero significado de la belleza, el amor y la compasión. Es una historia de transformación, aceptación y la búsqueda de la verdadera felicidad.'
+                },
+                'mulan': {
+                    'image': 'mulan1.gif',
+                    'title': 'Mulan',
+                    'text': 'Mulan: Únete a Mulan en su valiente y épica aventura para proteger a su familia y defender el honor de su país. Esta película te lleva a la antigua China, donde Mulan desafía las expectativas sociales al disfrazarse de hombre y unirse al ejército imperial. Con coraje y determinación, Mulan lucha contra los invasores hunos y demuestra su valía como guerrera. Es una historia de sacrificio, honor y el poder de la determinación.'
+                },
+                'dumbo': {
+                    'image': 'dumbo1.gif',
+                    'title': 'Dumbo',
+                    'text': 'Dumbo: Déjate llevar por las alturas con Dumbo, un entrañable elefantito con orejas gigantes y un corazón aún más grande. Esta película te lleva al mágico circo de Medici, donde Dumbo descubre su extraordinario talento para volar. Acompañado por su amigo Timoteo y una banda de ratones parlantes, Dumbo supera la adversidad y se convierte en una sensación del espectáculo. Es una historia de amistad, autoaceptación y el poder de creer en ti mismo.'
+                },
+                'cinderella': {
+                    'image': 'cenicienta1.gif',
+                    'title': 'Cinderella',
+                    'text': 'Cinderella: Sumérgete en el cuento de hadas clásico de "Cinderella", una historia de esperanza, amor y la magia de los sueños cumplidos. Ambientada en un mundo de elegantes bailes y vestidos deslumbrantes, sigue el viaje de la joven Ella, quien sufre las injusticias de su madrastra y hermanastras. Con la ayuda de su hada madrina y su bondadoso corazón, Cinderella supera la adversidad y encuentra su final feliz al enamorarse del apuesto príncipe. Es una historia de bondad, perseverancia y la creencia en los milagros.'
+                },
+                'jungle_book': {
+                    'image': 'ellibrodelaseva1.gif',
+                    'title': 'The Jungle Book',
+                    'text': 'The Jungle Book: Acompaña a Mowgli en un emocionante viaje por la selva en "The Jungle Book", donde se encuentra con una variedad de criaturas fascinantes, desde el amigable oso Baloo hasta el temible tigre Shere Khan. Criado por lobos y guiado por Bagheera, una pantera negra, Mowgli descubre el verdadero significado de la familia y la amistad mientras lucha por encontrar su lugar en el mundo. Es una historia de aventura, descubrimiento personal y el poder del hogar.'
+                },
+                'alice': {
+                    'image': 'alicia1.gif',
+                    'title': 'Alice in Wonderland',
+                    'text': 'Alice in Wonderland: Sumérgete en el mundo surrealista y mágico de "Alice in Wonderland", donde los sueños se convierten en realidad y la imaginación no tiene límites. Acompaña a Alice en su viaje por el País de las Maravillas, donde se encuentra con personajes extravagantes como el Sombrerero Loco, el Gato de Cheshire y la Reina de Corazones. Con su ingenio y valentía, Alice desafía las convenciones y descubre el poder de la imaginación para cambiar el mundo que la rodea. Es una historia de aventura, autodescubrimiento y la búsqueda del significado en un mundo lleno de maravillas y misterios.'
+                },
+                'maleficent': {
+                    'image': 'malefica1.gif',
+                    'title': 'Maleficent',
+                    'text': 'Maleficent: Descubre la fascinante historia no contada de Maleficent, la icónica villana de Disney, en una épica saga de amor, traición y redención. Ambientada en un mundo de fantasía y magia, la película te lleva a la tierra de los Moors, donde Maleficent, una poderosa hada con un corazón endurecido por la traición, lucha por proteger su hogar de la invasión humana. Cuando Maleficent maldece a la princesa Aurora, desencadenando una serie de eventos catastróficos, descubre que el amor y la compasión pueden cambiar incluso a los corazones más oscuros. Es una historia de heroísmo, perdón y la búsqueda de la paz interior.'
+                }
+            };
+
+            var description = descriptions[movie];
+            if (description) {
+                document.getElementById('description-image').src = description.image;
+                document.getElementById('description-title').textContent = description.title;
+                document.getElementById('description-text').textContent = description.text;
+
+                document.getElementById('description-section').style.display = 'block';
+            }
+            
+        }
+    </script>
+   
+</body>
+</html>
